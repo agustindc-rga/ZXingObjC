@@ -14,15 +14,17 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
-
+/**
+ * One row of an RSS Expanded Stacked symbol, consisting of 1+ expanded pairs.
+ */
 @interface ZXExpandedRow : NSObject
 
-@property (nonatomic, assign) int rowNumber;
-@property (nonatomic, assign) BOOL wasReversed;
-@property (nonatomic, retain) NSArray* pairs;
+@property (nonatomic, retain, readonly) NSArray *pairs;
+@property (nonatomic, assign, readonly) int rowNumber;
+@property (nonatomic, assign, readonly) BOOL wasReversed;
 
 - (id)initWithPairs:(NSArray *)pairs rowNumber:(int)rowNumber wasReversed:(BOOL)wasReversed;
-
+- (BOOL)isReversed;
 - (BOOL)isEquivalent:(NSArray *)otherPairs;
+
 @end
