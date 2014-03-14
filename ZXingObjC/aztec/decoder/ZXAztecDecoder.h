@@ -26,6 +26,6 @@
 - (ZXDecoderResult *)decode:(ZXAztecDetectorResult *)detectorResult error:(NSError **)error;
 
 // This method is used for testing the high-level encoder
-+ (NSString *)highLevelDecode:(BOOL *)correctedBits length:(NSUInteger)correctedBitsLength error:(NSError **)error;
++ (NSString *)highLevelDecode:(BOOL *)correctedBits length:(NSUInteger)correctedBitsLength;
 
 @end
